@@ -1,6 +1,5 @@
 package pk;
 
-import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,9 +48,16 @@ public class HotelController {
         return hotel;
     }
 
-    @GetMapping("/price/{maxPrice}")
-    public List<Hotel> getbyPrice(@PathVariable("maxPrice") int maxPrice){
-        List<Hotel> hotels = this.hotelRepository.findByDailyPriceLessThan(maxPrice);
+    @GetMapping("/lprice/{price}")
+    public List<Hotel> getbyPrice(@PathVariable("price") int price){
+        List<Hotel> hotels = this.hotelRepository.findByDailyPriceLessThan(price);
+
+        return hotels;
+    }
+
+    @GetMapping("/gprice/{price}")
+    public List<Hotel> getbyMinPrice(@PathVariable("price") int price){
+        List<Hotel> hotels = this.hotelRepository.findByDailyPriceGreaterThan(price);
 
         return hotels;
     }
