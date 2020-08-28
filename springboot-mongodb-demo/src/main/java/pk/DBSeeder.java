@@ -21,8 +21,8 @@ public class DBSeeder implements CommandLineRunner {
                 150,
                 new Address("Bombay", "India"),
                 Arrays.asList(
-                        new Review("Pritesh", 9, true),
-                        new Review("Shivani", 9, true)
+                        new Review("Chandler", 9, true),
+                        new Review("Joey", 9, true)
                 )
         );
         Hotel oberoi = new Hotel(
@@ -30,8 +30,8 @@ public class DBSeeder implements CommandLineRunner {
                 200,
                 new Address("Paris", "France"),
                 Arrays.asList(
-                        new Review("Pritesh", 10, true),
-                        new Review("Shivani", 10, true)
+                        new Review("Chandler", 8, true),
+                        new Review("Joey", 10, true)
                         )
         );
         Hotel taj = new Hotel(
@@ -39,14 +39,14 @@ public class DBSeeder implements CommandLineRunner {
                 400,
                 new Address("Bombay", "India"),
                 Arrays.asList(
-                        new Review("Pritesh", 10, true),
-                        new Review("Shivani", 10, true)
+                        new Review("Chandler", 5, true),
+                        new Review("Joey", 7, true)
                         )
         );
         Hotel sands = new Hotel(
                 "Golden sands",
                 400,
-                new Address("Bombay", "India"),
+                new Address("Rome", "Italy"),
                 Arrays.asList(
 
                 )
